@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="blue">{{greetings}}<i class="green fa fa-check" aria-hidden="true"></i></h1>
+    <p>Enter text: <input type="text" [(ngModel)]="inputValue"><p>
+    <ul>
+        <li *ngFor="let person of persons | filterBy : ['name'] : inputValue">{{ person.name }}</li>
+    </ul>
+
+    <a routerLink="/foo" routerLinkActive="active">Click here for Foo</a>
+    <a routerLink="/bar" routerLinkActive="active">Click here for Bar</a>    
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
